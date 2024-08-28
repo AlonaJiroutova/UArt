@@ -1,0 +1,159 @@
+body {
+    font-family: 'Unna', serif;
+
+}
+
+.heading-primary {
+    font-size: $default-font-size * 4;
+    color: rgba($color-white, 0.9);
+    text-align: center;
+    text-transform: uppercase;
+
+    @include responsive(tab-portrait) {
+        font-size: $default-font-size * 3.8;
+    };
+
+    @include responsive(phone) {
+        font-size: $default-font-size * 3.5;
+    };
+
+    &--part1 {
+        display: inline-block;
+        width: max-content;
+        margin-bottom: 1rem;
+        animation: moveInRight 1s ease-out;
+    }
+
+    &--part2 {
+        display: inline-block;
+        width: max-content;
+        font-size: $default-font-size * 6;
+        letter-spacing: 0.8rem;
+        animation: moveInLeft 1s ease-out;
+
+        @include responsive(tab-landscape) {
+            font-size: $default-font-size * 5.8;
+        };
+
+        @include responsive(tab-portrait) {
+            font-size: $default-font-size * 5.5;
+        };
+
+        @include responsive(phone) {
+            font-size: $default-font-size * 5;
+
+        };
+    }
+
+}
+
+.heading-secondary-text-box {
+    @include responsive(tab-portrait) {
+      text-align: center;
+
+    };
+}
+
+.heading-secondary {
+    display: inline-block;
+    margin-bottom: 5rem;
+    color: $color-white;
+    text-transform: capitalize;
+    font-size: $default-font-size * 4.8;
+    font-weight: 300;
+    border-bottom: solid 0.1rem transparent;
+
+    @include responsive(tab-portrait) {
+        font-size: $default-font-size * 6;
+        letter-spacing: 0.4rem;
+
+    };
+
+
+
+
+
+    &:hover {
+        border-bottom: solid 0.1rem;
+        transform: translateY(-0.1rem);
+
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+
+    a {
+        text-decoration: none;
+        color: $color-white;
+    }
+}
+
+.heading-tertiary {
+    font-size: $default-font-size * 3.2;
+    color: $color-white;
+    text-transform: capitalize;
+    margin-bottom: 1.8rem;
+
+    @include responsive(tab-portrait) {
+        font-size: $default-font-size * 3.6;
+        text-align: center;
+    };
+}
+
+.card-heading {
+    display: inline-block;
+    font-size: $default-font-size * 2.4;
+    color: $color-white;
+
+    @include responsive(desktop) {
+        font-size: $default-font-size * 2.2;
+    };
+
+    @include responsive(tab-landscape) {
+        font-size: $default-font-size * 2.4;
+    };
+
+    @include responsive(tab-portrait) {
+        font-size: $default-font-size * 3.2;
+    };
+
+    @include responsive(phone) {
+        font-size: $default-font-size * 3.4;
+    };
+
+
+}
+
+.card-text {
+    font-size: $default-font-size * 2;
+    color: $color-white;
+
+
+    @include responsive(tab-portrait) {
+        font-size: $default-font-size * 2.8;
+    };
+
+    @include responsive(phone) {
+        font-size: $default-font-size * 3;
+    };
+}
+
+.slogan {
+    font-size: $default-font-size * 4.8;
+    color: rgba($color-white, 0.9);
+
+    @include responsive(tab-portrait) {
+        font-size: $default-font-size * 3.8;
+    };
+
+    @include responsive(phone) {
+        font-size: $default-font-size * 3;
+    };
+
+}
+
+.footer-tag {
+    font-size: $default-font-size * 3;
+    color: $color-red;
+}

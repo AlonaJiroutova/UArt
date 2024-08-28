@@ -1,0 +1,26 @@
+.footer {
+    width: 100%;
+    min-height: 35vh;
+    max-height: fit-content;
+    background-image: linear-gradient(to right, rgba($color-black, 0.5), rgba($color-black, 0.5));
+    background-size: cover;
+    background-position: top;
+
+    @include responsive(tab-landscape) {
+        min-height: 30vh;
+    };
+
+    @include responsive(tab-portrait) {
+        min-height: 25vh;
+    };
+
+    @include responsive(phone) {
+        min-height: 20vh;
+    };
+
+    &-text-box {
+        text-align: center;
+        margin-top: 8rem;
+    }
+
+}

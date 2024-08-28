@@ -1,0 +1,27 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/functions.scss";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typografy";
+@import "base/utilities";
+
+@import "components/buttons";
+@import "components/cards";
+@import "components/navigation";
+@import "components/carousel";
+
+@import "layouts/header";
+@import "layouts/footer";
+@import "layouts/about";
+@import "layouts/contact";
+@import "layouts/artists";
+
+
+@import "pages/home";
+@import "pages/painters";
+@import "pages/musicians";
+@import "pages/writers";
+
+

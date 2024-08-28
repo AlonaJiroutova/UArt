@@ -1,0 +1,335 @@
+header.header-artists {
+    z-index: 1;
+    font-family: "Unna", serif;
+    position: relative;
+}
+
+.logo-artists {
+
+    @include responsive(tab-portrait) {
+        font-size: $default-font-size * 2.6;
+        top: 3rem;
+    };
+
+
+    @include responsive(small-phone) {
+        top: 2.8rem;
+    };
+
+    a {
+        text-decoration: none;
+        color: rgba($color-white, 0.7);
+
+
+
+        &:hover {
+            color: $color-white;
+        }
+    }
+}
+
+nav.navigation-bar-artists {
+    min-width: fit-content;
+    max-width: 60%;
+
+    ul li a {
+        margin-left: 10rem;
+        color: rgba($color-white, 0.9);
+    }
+}
+
+.list-of-artists-wraper {
+    @include flexbox-center-display-none;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: right;
+    position: absolute;
+    text-align: center;
+}
+
+.list-of-artists--item {
+    list-style: none;
+
+    a:link,
+    a:visited {
+        display: inline-block;
+        font-size: $default-font-size * 2.8;
+        text-decoration: none;
+        color: rgba($color-white, 0.9);
+        margin-bottom: 2rem;
+        border-bottom: solid 0.2rem transparent;
+
+        @include responsive(tab-portrait) {
+            margin-bottom: 4rem;
+            font-size: $default-font-size * 3.2;
+        }
+    }
+
+    a:hover {
+        border-bottom: solid 0.2rem;
+        transform: translateY(-0.2rem);
+    }
+}
+
+.main-section-artists {
+    background-size: cover;
+    background-position: right;
+    font-family: "Unna", serif;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 150vh;
+}
+
+
+
+.main-wraper {
+    @include flexbox-justify-space-between;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+
+}
+
+.about-artist {
+    margin: 12rem 0;
+    width: 70%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    @include responsive(desktop) {
+        width: 85%;
+
+    };
+
+    @include responsive(tab-portrait) {
+        margin-top: 15rem;
+    };
+
+    &--top {
+        @include flexbox-justify-space-between;
+        width: 100%;
+        min-height: fit-content;
+        max-height: max-content;
+        margin: 3rem 0 6rem 0;
+
+        @include responsive(tab-portrait) {
+            flex-direction: column-reverse;
+        };
+
+        .artist-picture {
+            width: 30%;
+            object-fit: cover;
+
+            @include responsive(tab-portrait) {
+                width: 75%;
+                margin-bottom: 2rem;
+            }
+
+            ;
+
+            @include responsive(phone) {
+                width: 85%;
+            }
+
+            ;
+
+            img {
+                width: 100%;
+                border-radius: $border-radius-1;
+            }
+        }
+
+        .artist-text {
+            width: 60%;
+            height: fit-content;
+            color: $color-white;
+            font-size: $default-font-size * 2;
+            letter-spacing: 0.15rem;
+
+            &  p:first-of-type{
+                margin-bottom: 1.5rem;
+
+                @include responsive(tab-portrait) {
+                    margin-bottom: 3rem;
+                };
+            }
+
+            @include responsive(tab-portrait) {
+                width: 80%;
+                margin-bottom: 4rem;
+                font-size: $default-font-size * 2.4;
+                text-align: justify;
+            };
+
+            @include responsive(phone) {
+                width: 85%;
+            };
+
+            .main-info {
+                font-size: $default-font-size * 2;
+                text-align: justify;
+
+                @include responsive(tab-portrait) {
+                    font-size: $default-font-size * 2.4;
+                };
+
+
+            }
+        }
+    }
+
+    .pattern {
+        width: 100%;
+        height: 10rem;
+        background-position: center;
+        background-size: cover;
+    }
+
+
+    &--bottom {
+        @include flexbox-center;
+        width: 100%;
+        height: fit-content;
+        flex-direction: column;
+
+        .main-info-artist {
+            width: 100%;
+            margin: 5rem auto;
+            color: $color-white;
+            font-size: $default-font-size * 2.4;
+            letter-spacing: 0.15rem;
+            text-align: justify;
+
+            p {
+                margin: 5rem 0;
+            }
+
+            .artist-first-p {
+                margin-top: 0;
+            }
+
+            .last-p {
+                padding-bottom: 15rem;
+            }
+
+            .photo-element {
+                width: 80%;
+                margin: 3rem auto;
+                position: relative;
+
+                @include responsive(tab-landscape) {
+                    width: 85%;
+                }
+
+                ;
+
+                @include responsive(tab-portrait) {
+                    width: 100%;
+                }
+
+                ;
+
+                img {
+                    width: 100%;
+                    border-radius: $border-radius-1;
+                }
+
+                p {
+                    @include photo-description;
+
+                    @include responsive(tab-portrait) {
+                        @include photo-description-responsive;
+                   };
+                }
+            }
+
+            .float-right {
+                float: right;
+                margin: 1rem 0 3rem 3rem;
+
+            }
+
+            .float-left {
+                float: left;
+                margin: 1rem 3rem 3rem 0;
+
+            }
+
+            .image-in-text {
+                display: block;
+                width: 45%;
+                height: fit-content;
+                position: relative;
+
+                @include responsive(tab-portrait) {
+                    width: 55%;
+                };
+                @include responsive(phone) {
+                    width: 100%;
+                };
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: $border-radius-2;
+                }
+
+                p.img-description {
+                    @include photo-description;
+
+                    @include responsive(tab-landscape) {
+                        @include photo-description-responsive;
+
+                    };
+                }
+            }
+        }
+    }
+}
+
+.image-in-text.float-right.width-55-img,
+.image-in-text.float-left.width-55-img,
+#franko-comics {
+    width: 55%;
+
+    @include responsive(tab-portrait) {
+            width: 50%;
+        };
+    @include responsive(phone) {
+        width: 100%;
+        };
+}
+
+.image-in-text.float-left.width-35-img,
+.image-in-text.float-right.width-35-img,
+#lesia-comics {
+    width: 35%;
+
+    @include responsive(tab-portrait) {
+            width: 50%;
+        };
+    @include responsive(phone) {
+            width: 100%;
+        };
+}
+
+.image-in-text.float-right.width-45-img,
+.image-in-text.float-left.width-45-img {
+    width: 45%;
+  
+    @include responsive(tab-portrait) {
+            width: 50%;
+        };
+    @include responsive(phone) {
+            width: 100%;
+        };
+}
+
+footer.footer-artists {
+    position: absolute;
+    bottom: 0;
+}

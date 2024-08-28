@@ -1,0 +1,93 @@
+@mixin flexbox-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flexbox-justify-space-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin flexbox-center-display-none {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin photo-description {
+    width: 100%;
+    font-size: $default-font-size *1.8;
+    color: $color-black;
+    text-align: center;
+    background-color: rgba($color-light-grey, 0.4);
+    backdrop-filter: saturate(180%) blur(0.5rem);
+    padding: 0.8rem 2rem;
+    margin: 0;
+    border-radius: $border-radius-text;
+    position: absolute;
+    bottom: 0;
+}
+
+@mixin photo-description-responsive {
+    position: relative;
+    background-color: rgba($color-light-grey, 0.3);
+    color: $color-white;
+    font-size: $default-font-size * 2.2;
+    backdrop-filter: none;
+    margin-top: 2rem;
+    border-radius: $border-radius-1;
+}
+
+@mixin responsive($breakpoint) {
+    @if $breakpoint ==small-phone {
+        @media (max-width: 26.25em) {
+            @content
+        }
+
+        ; // 420px
+    }
+
+    @if $breakpoint ==phone {
+        @media (max-width: 30em) {
+            @content
+        }
+
+        ; // 480px
+    }
+
+    @if $breakpoint ==tab-portrait {
+        @media (max-width: 48em) {
+            @content
+        }
+
+        ; // 768px
+    }
+
+    @if $breakpoint ==tab-landscape {
+        @media (max-width: 59.38em) {
+            @content
+        }
+
+        ; //950px
+    }
+
+    @if $breakpoint ==desktop {
+        @media (max-width: 75em) {
+            @content
+        }
+
+        ; //1200px
+    }
+
+    @if $breakpoint ==large-desktop {
+        @media (min-width: 87.5em) {
+            @content
+        }
+
+        ; //1400px
+    }
+
+
+}

@@ -1,0 +1,148 @@
+.btn__main {
+
+    &:link,
+    &:visited {
+        display: inline-block;
+        margin-top: 2rem;
+        text-decoration: none;
+        text-transform: capitalize;
+        color: $color-grey;
+        background-color: rgba($color-white, 0.8);
+        font-size: $default-font-size * 2;
+        border-radius: $border-radius-2;
+        padding: 1rem 3rem;
+
+        @include responsive(tab-landscape) {
+            font-size: $default-font-size * 2.2;
+            margin-top: 4rem;
+        };
+
+    }
+
+    &:hover {
+        background-color: $color-white;
+        box-shadow: 0 1.5rem 2rem rgba($color-black, 0.8);
+        transform: translateY(-0.3rem);
+
+    }
+
+    &:active {
+        box-shadow: 0 0.5rem 2rem rgba($color-black, 0.8);
+        transform: translateY(-0.1rem);
+    }
+
+    &--animated {
+        animation: moveInUp 1s ease-out 0.55s;
+        animation-fill-mode: backwards;
+    }
+
+}
+
+.btn__secondary {
+    display: inline-block;
+    position: absolute;
+    bottom: -7rem;
+    right: 0;
+    font-size: $default-font-size * 2.8;
+    text-decoration: none;
+    color: $color-white;
+    border-bottom: solid 0.1rem transparent;
+
+    @include responsive(tab-landscape) {
+            font-size: $default-font-size * 3.4;
+            
+        };
+    @include responsive(tab-portrait) {
+            font-size: $default-font-size * 3.8;
+            
+        };
+    @include responsive(phone) {
+            font-size: $default-font-size * 4;
+            
+        };
+
+
+    &:hover {
+        border-bottom: solid 0.1rem;
+        transform: translateY(-0.1rem);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+.btn-container-artists {
+    @include flexbox-center;
+    position: absolute;
+    width: 100%;
+    transform: translateY(30rem);
+    animation: appearance 1s ease 0.3s;
+    animation-fill-mode: backwards;
+
+    @include responsive(tab-landscape) {
+            height: 50vh;
+            padding-bottom: 20rem;
+    
+        }
+
+    .btn-main-artists {
+        @include flexbox-center;
+        width: 20rem;
+        height: 20rem;
+        font-size: $default-font-size * 2.8;
+        text-align: center;
+        border-radius: $border-radius-50;
+
+       
+    }
+}
+
+
+.close-icon-artists {
+    color: $color-white;
+    cursor: pointer;
+    position: absolute;
+    top: 4rem;
+    right: 4rem;
+    transform: scale(2);
+
+    @include responsive(tab-landscape) {
+        transform: scale(1.5);
+    };
+    @include responsive(tab-portrait) {
+        transform: scale(1.2);
+    };
+
+    &:hover {
+        color: rgba($color-white, 0.7);
+    }
+}
+
+.source-link:link,
+.source-link:visited {
+    text-decoration: none;
+    color: $color-white;
+    font-size: $default-font-size * 1.8;
+}
+
+.source-link:hover {
+    border-bottom: solid 0.1rem $color-white;
+}
+
+.close-icon {
+    color: $color-white;
+    cursor: pointer;
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    transform: scale(1.5);
+
+    @include responsive(tab-portrait) {
+        transform: scale(1.2);
+    };
+
+    &:hover {
+        color: $color-black;
+    }
+}

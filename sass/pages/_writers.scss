@@ -1,0 +1,92 @@
+#main-section-aritsts-writers {
+  background-image: linear-gradient(to bottom,
+      rgba($color-black, 0.7),
+      rgba($color-black, 0.5)),
+    url(../images/writers_background.jpg);
+}
+
+.list-of-artists-wraper.list-of-artists-writers-wraper {
+  background-image: linear-gradient(to bottom,
+      rgba($color-black, 0.7),
+      rgba($color-black, 0.5)),
+    url(../images/writers_background.jpg);
+}
+
+#navigation-bar-artists-writers {
+  width: 35%;
+}
+
+.poem {
+  text-align: center;
+  font-style: italic;
+}
+
+
+
+#photo-element-kotliarevsky {
+  width: 100%;
+}
+
+#stus-comics {
+  width: 40rem;
+  @include responsive(tab-portrait) {
+      width: 80%;
+  };
+}
+
+#natalka-poltavka-comics {
+  width: 55rem;
+  @include responsive(tab-portrait) {
+      width: 80%;
+  };
+}
+
+.photo-element a.description {
+  display: block;
+  text-align: center;
+  color: $color-white;
+  text-decoration: none;
+  font-size: 2.8rem;
+  margin: 2.5rem;
+}
+
+.photo-element a.description:hover {
+  color: $color-green;
+}
+
+#marusya-churai-comics {
+  width: 35rem;
+}
+
+
+#full-width-image{
+  width: 100%;
+  p{
+    border-radius: 1rem 1rem 0 0;
+    top: 0;
+    min-height: max-content;
+    @include responsive(tab-portrait) {
+        border-radius: 1rem;
+      };
+    }
+    
+  
+    ;
+}
+
+#lesia-song {
+  text-align: center;
+  margin-bottom: 3rem;
+  p{
+    margin-bottom: 1.5rem;
+  }
+  iframe{
+    width: 65%;
+    @include responsive(tab-portrait){
+      width: 80%;
+    };
+    @include responsive(phone){
+      width: 100%;
+    };
+  }
+}

@@ -1,0 +1,45 @@
+
+#main-section-aritsts-musicians {
+    background-image: linear-gradient(to bottom,
+            rgba($color-black, 0.9),
+            rgba($color-black, 0.5)),
+        url(../images/musicians_background.jpg);
+}
+
+.list-of-artists-wraper.list-of-artists-musicians-wraper {
+    background-image: linear-gradient(to bottom,
+            rgba($color-black, 0.9),
+            rgba($color-black, 0.5)),
+        url(../images/musicians_background.jpg);
+}
+
+#lysenko-music-1 {
+    padding: 0.5rem;
+   
+}
+
+.pattern.pattern-wave {
+    background-image: url(../images/pattern_12.png);
+}
+
+
+#lysenko-album {
+    width: 50%;
+    float: right;
+    margin: 1rem 0 3rem 3rem;
+    @include responsive(tab-portrait) {
+        width: 100%;
+    };
+}
+
+.you-tube-element {
+    @include flexbox-center;
+    margin: 3rem 0;
+    
+    iframe{
+    @include responsive(tab-portrait) {
+        width: 100%; 
+    };
+    }
+}
+

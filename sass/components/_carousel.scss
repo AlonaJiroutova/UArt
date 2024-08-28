@@ -1,0 +1,107 @@
+.artist-carousel {
+    @include flexbox-center;
+    width: 70%;
+    height: max-content;
+    margin-top: 6rem;
+
+
+    @include responsive(tab-portrait) {
+        width: 90%;
+    };
+
+    @include responsive(phone) {
+        width: 95%;
+    };
+
+    ul {
+        height: 75vh;
+        list-style: none;
+        padding: 0;
+
+        @include responsive(desktop) {
+            height: 55vh;
+        };
+
+        @include responsive(tab-landscape) {
+            height: 50vh;
+            margin-bottom: 15rem;
+
+        };
+
+        @include responsive(tab-portrait) {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 0;
+
+        };
+
+
+    }
+
+    &--item {
+        position: relative;
+        height: 100%;
+        width: max-content;
+
+        @include responsive(tab-portrait) {
+            width: 100%;
+        };
+
+
+        .paint-info {
+            @include photo-description;
+
+            @include responsive(tab-landscape) {
+                @include photo-description-responsive;
+
+            };
+            @include responsive(tab-portrait) {
+                font-size: $default-font-size * 2.4;
+            };
+
+
+        }
+
+        &--img {
+            display: block;
+            height: 100%;
+            border-radius: $border-radius-1;
+            object-fit: cover;
+            object-position: center;
+
+            @include responsive(tab-portrait) {
+                width: 100%;
+            };
+
+        }
+    }
+
+    &--btn {
+        border: none;
+        background-color: transparent;
+        padding: 3rem;
+        font-size: $default-font-size * 8;
+        font-weight: bold;
+        color: rgba($color-white, 0.6);
+        transition: all 0.2 ease;
+        line-height: 1;
+
+        @include responsive(tab-portrait) {
+            padding: 2rem;
+            font-size: $default-font-size * 7;
+        };
+
+        @include responsive(phone) {
+            font-size: $default-font-size * 6;
+        };
+
+        &:hover {
+            color: $color-white;
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
+
+    }
+}
